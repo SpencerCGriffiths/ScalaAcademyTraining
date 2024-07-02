@@ -48,3 +48,35 @@ object HelloWorld extends App {
 Syntax:
 Printing in Scala
 println(“Hello World!”) 
+
+## Storing Values in Scala 
+
+/Users/spencer.griffiths/Documents/ScalaAcademyTraining/src/main/scala/Week1/Tues/StoringValues.sc
+
+Values (Vals) vs Variables (Vars)
+
+Vals:
+Vals are immutable and cannot be changed
+Often used as the value is always known
+Safe more trustworthy code
+
+Vars:
+Vars are mutable and can be reassigned
+Difficult to know what the value is at a given time
+Can cause issues if two parts of the same program are trying to access/manipulate it at the same time. 
+
+**(colloquially people will refer to values as variables)**
+
+Storing Values: 
+
+Suzie went to the shop and bought 5 melons at 50p, 2 apples at 10p and 6 fizzy drinks at £1.20. 
+
+What is the total cost in pence?
+/Users/spencer.griffiths/Documents/ScalaAcademyTraining/src/main/scala/Week1/Tues/StoringValues.sc
+
+
+
+.gitignore file:
+file -> new -> .ignore file -> .gitIgnore -> scala
+
+

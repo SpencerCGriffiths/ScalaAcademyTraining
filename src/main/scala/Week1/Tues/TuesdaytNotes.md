@@ -74,7 +74,31 @@ Suzie went to the shop and bought 5 melons at 50p, 2 apples at 10p and 6 fizzy d
 What is the total cost in pence?
 /Users/spencer.griffiths/Documents/ScalaAcademyTraining/src/main/scala/Week1/Tues/StoringValues.sc
 
+Types: 
 
+Types are like a label to describe what data you're storing. 
+Once defined a value/variable cannot store something that is not of the same type 
+Scala offers a variety of data types to model different types of information relevant to the probolem that you as a developer may want to solve. 
+
+Integer (Int)
+val one:Int = 1
+
+String (String)
+val two:String = "Two"
+
+Booleans (true or false)
+val good:Boolean = true
+
+
+Operators
+
+Operators are symbols that when compuling will perform a specific fucntion. 
+Scal;a has many inbuilt operators. We are going to look at 3 commonly used ones
+
+Arithmetic 
++Add
+-Minus
+=Equals
 
 .gitignore file:
 file -> new -> .ignore file -> .gitIgnore -> scala

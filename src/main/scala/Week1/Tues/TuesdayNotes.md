@@ -89,6 +89,75 @@ val two:String = "Two"
 Booleans (true or false)
 val good:Boolean = true
 
+## Numeric Types
+
+Integer (Int) 
+Represents a 32-bit signed integer. It can hold values from -2^31 to 2^31-1.
+val intValue: Int = 42
+
+Long (Long) 
+Represents a 64-bit signed integer. It can hold values from -2^63 to 2^63-1.
+val longValue: Long = 10000000000L
+
+Float (Float)
+Represents a 32-bit IEEE 754 floating-point number. It requires an f or F suffix.
+val floatValue: Float = 3.14f
+
+Double (Double) 
+Represents a 64-bit IEEE 754 floating-point number. It is the default type for floating-point numbers in Scala.
+val doubleValue: Double = 3.14159
+
+Short (Short) 
+Represents a 16-bit signed integer. It can hold values from -2^15 to 2^15-1.
+val shortValue: Short = 12345
+
+Byte (Byte) 
+Represents an 8-bit signed integer. It can hold values from -128 to 127.
+val byteValue: Byte = 127
+
+## Character Type
+
+Character (Char) 
+Represents a 16-bit unsigned Unicode character.
+val charValue: Char = 'A'
+
+Boolean (Boolean)
+Represents a value that is either true or false.
+val booleanValue: Boolean = true
+
+String (String)
+Represents a sequence of characters. In Scala, String is a class, but it is used frequently enough to be considered a basic type.
+val stringValue: String = "Hello, Scala!"
+
+Unit (Unit)
+Represents the absence of a value. It is similar to void in Java or None in Python. The only value of type Unit is ().
+val unitValue: Unit = ()
+
+Any (Any)
+The supertype of all types in Scala. It can hold any type of value.
+val anyValue: Any = 42  // Could be any type
+
+Null (null)
+The type of the null reference, which is a subtype of all reference types but not of value types.
+val nullValue: String = null
+
+Nothing (nothing)
+The bottom type in Scala's type hierarchy. It is a subtype of every other type. No value can actually have this type.
+def throwError(): Nothing = throw new Exception("An error occurred")
+
+val intValue: Int = 42
+val doubleValue: Double = 3.14159
+val longValue: Long = 10000000000L
+val floatValue: Float = 3.14f
+val shortValue: Short = 12345
+val byteValue: Byte = 127
+val charValue: Char = 'A'
+val booleanValue: Boolean = true
+val stringValue: String = "Hello, Scala!"
+val unitValue: Unit = ()
+val anyValue: Any = 42
+val nullValue: String = null
+
 
 Operators
 

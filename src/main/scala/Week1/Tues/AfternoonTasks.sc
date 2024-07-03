@@ -12,6 +12,7 @@ val b: Boolean = 144 / 12 >= 12
 
 //c)
 //Cat is less than Dog
+//It is case sensitive (Upper cases come first)
 val c: Boolean = "Cat" < "Dog"
 
 //d)
@@ -92,8 +93,13 @@ println(string.toLowerCase())
 val anythingButNew: String = "HaHa, problem solved!"
 println(anythingButNew)
 
+// !!!!!! You can get around key words with Backticks
+val `new`: String = ""
+
 // Are there any other words you cannot use?
 // See notes for descriptions of words
+
+
 /**
  - abstract
  - case

@@ -116,7 +116,7 @@ Research Task
 
 if statements always return values. This means we can assign values based on if statements.
 
- (always return values? )
+ (always return values?)
 
 How would we go about doing this or where could we search to find out?
 Create two values that hold integers. Assign any integer you'd like to these values.
@@ -128,3 +128,4 @@ val int1: Int = 6
 val int2: Int = 3
 val str1: String = if (int1 > int2) "yes" else "no"
 println(str1)
+

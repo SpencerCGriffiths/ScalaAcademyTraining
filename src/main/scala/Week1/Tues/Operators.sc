@@ -96,6 +96,8 @@ val q1 = ((4 + 3) * 55) < 300
 // ninety-six divided by twelve is greater than eight or exactly eight
 val q2 = (96 / 12) > 88 || (96 / 12) == 88
 
+
+
 // Hamster is less than Hippo (strings)
 val q3 = "Hamster" < "Hippo"
 //Compares something alphabetically

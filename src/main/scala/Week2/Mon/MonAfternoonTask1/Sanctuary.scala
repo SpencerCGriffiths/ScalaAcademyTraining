@@ -21,10 +21,10 @@ object Sanctuary extends App {
 
 
 
- def getAnimalAge(animal: Animal): Float = {
+ private def getAnimalAge(animal: Animal): Float = {
     val age = animal.age
-   age
- }
+    age
+    }
 
 
   println(getAnimalAge(pumbaTheWarthog))

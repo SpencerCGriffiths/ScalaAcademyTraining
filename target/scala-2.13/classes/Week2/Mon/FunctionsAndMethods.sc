@@ -18,6 +18,8 @@
 
 // Named Function:
 val addition = (number:Int) => number + 1
+//Long hand:
+val addition: Int => Int = (number: Int) => number + 1
 
 
 // Method:

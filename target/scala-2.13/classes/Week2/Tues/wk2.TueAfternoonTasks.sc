@@ -17,7 +17,7 @@
 case class Person(name: String, age: Int, nationality: String, isStudent: Boolean) // Declaring a case class
 val firstPerson = new Person("Carlos",23,"Spanish",true) // case class can use new keyword
 val secondPerson = Person("Carlos",23,"Spanish",true) // case class can also not use new keyword
-val thirdPerson = Person("Chloe", 25, "British", false)
+// thirdPerson = Person("Chloe", 25, "British", false) // Doesn't run without Val
 
 class Animal(name: String, colour: String, pet: Boolean) // Declaring normal class
 //val cat = Animal("cat", "black", true) // class cannot work without new keyword
@@ -97,6 +97,7 @@ createClasses.equals(createClassesTime)
  * productElement: Access individual fields by index.
  * productIterator: Iterate over all fields.
  * productPrefix: Name of the case class.
+ * eq: Checks if the references are the same
  */
 
 case class classMethodTesting(val test1: String)
@@ -145,42 +146,36 @@ person.productArity
 person.productElement(0)
 person.productElement(1)
 
-/** */
-/** */
-//
-//  match {
-//    case Some((name, age)) => s"Name: $name, Age: $age"
-//    case None => "No match found"
-//  }
+/** --> productIterator - returns an iterator over all the elements of a case class*/
+person.productIterator.foreach(println)
 
 
-//
-//  val olderPerson = person.copy(age = 31)
-//  println(s"Older person: $olderPerson")
-//
-//  // Using the equals method
-//  val person2 = Person("Alice", 30, 5.6)
-//  println(person == person2) // true
-//
-//  // Using the hashCode method
-//  println(person.hashCode)
-//
-//  // Using the toString method
-//  println(person.toString)
-//
-//  // Using the productArity method
-//  println(person.productArity) // 3
-//
-//  // Using the productElement method
-//  println(person.productElement(0)) // Alice
-//
-//  // Using the productIterator method
-//  person.productIterator.foreach(println) // Alice, 30, 5.6
-//
-//  // Using the productPrefix method
-//  println(person.productPrefix) // Person
-//
+/** --> productPrefix - returns the name of the case class*/
+person.productPrefix
+
+
+/** --> Eq - Checks if the references are the same */
+chocolateMuffin.eq(anotherChocolateMuffin)
+chocolateMuffin.eq(chocolateMuffin)
+
 ////---------------------------------------------------
-///** ---------> */
+/** 1) What is the difference between == and .equals? why? *
+
+ "==" Operator:
+Defined in Scala's Any class.
+ Checks for structural equality.
+ Handles nulls gracefully.
+ Delegates to .equals for non-null references.
+
+ .equals Method:
+ Inherited from Java's Object class.
+ Default implementation checks for reference equality.
+ Can be overridden for custom equality logic (as in case classes).
+ Does not handle nulls gracefully if called on a null reference.
+
+ .eq Method:
+
+ Checks if the reference is the same
+ */
 ////---------------------------------------------------
 ///** ---------> */

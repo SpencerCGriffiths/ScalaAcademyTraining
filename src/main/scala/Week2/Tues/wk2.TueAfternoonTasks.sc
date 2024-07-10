@@ -17,7 +17,7 @@
 case class Person(name: String, age: Int, nationality: String, isStudent: Boolean) // Declaring a case class
 val firstPerson = new Person("Carlos",23,"Spanish",true) // case class can use new keyword
 val secondPerson = Person("Carlos",23,"Spanish",true) // case class can also not use new keyword
-val thirdPerson = Person("Chloe", 25, "British", false)
+// thirdPerson = Person("Chloe", 25, "British", false) // Doesn't run without Val
 
 class Animal(name: String, colour: String, pet: Boolean) // Declaring normal class
 //val cat = Animal("cat", "black", true) // class cannot work without new keyword
@@ -97,6 +97,7 @@ createClasses.equals(createClassesTime)
  * productElement: Access individual fields by index.
  * productIterator: Iterate over all fields.
  * productPrefix: Name of the case class.
+ * eq: Checks if the references are the same
  */
 
 case class classMethodTesting(val test1: String)
@@ -152,6 +153,11 @@ person.productIterator.foreach(println)
 /** --> productPrefix - returns the name of the case class*/
 person.productPrefix
 
+
+/** --> Eq - Checks if the references are the same */
+chocolateMuffin.eq(anotherChocolateMuffin)
+chocolateMuffin.eq(chocolateMuffin)
+
 ////---------------------------------------------------
 /** 1) What is the difference between == and .equals? why? *
 
@@ -166,6 +172,10 @@ Defined in Scala's Any class.
  Default implementation checks for reference equality.
  Can be overridden for custom equality logic (as in case classes).
  Does not handle nulls gracefully if called on a null reference.
+
+ .eq Method:
+
+ Checks if the reference is the same
  */
 ////---------------------------------------------------
 ///** ---------> */

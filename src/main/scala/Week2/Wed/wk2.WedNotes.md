@@ -47,3 +47,18 @@ Ensures that the tests are:
 
 We do not need to supply an implementation 
 We will get an error, but it will compile 
+
+Talk Through/Code Along: 
+
+- Create new gitBranch to work on
+- Create a Scala class on Wednesday TwoNumbers 
+- In Test Create a TwoNumbersSpec 
+- in shift,shift search build.sbt 
+- in build.sbt add:
+  - libraryDependencies += "org.scalactic" %% "scalactic" % "3.0.8"
+  libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.8" % "test"
+- When dependencies are added have to reload sbt
+  - (all dependencies are available online)
+- In TwoNumbersSpec.scala import: 
+  - import org.scalatest.FlatSpec 
+- 

@@ -1,8 +1,8 @@
 package Week2.Wed
 
-import org.scalatest.FlatSpec
+import org.scalatest.flatspec.AnyFlatSpec
 
-class FizzBuzzSpec extends FlatSpec {
+class FizzBuzzSpec extends AnyFlatSpec {
 
 
   "FizzBuzz" should "return Fizz if the input is exactly divisible by 3" in {

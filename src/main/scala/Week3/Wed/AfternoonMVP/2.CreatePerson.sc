@@ -8,6 +8,7 @@
  Create a method that accepts the above data and makes a Person case class from this data
  The Person case class should also include their age, star sign. If they have a dateOfDeath it should include their ageAtDeath*/
 import java.time.LocalDate
+import java.time.temporal.ChronoUnit
 
 case class Person(
                    fullName: String,
@@ -20,7 +21,11 @@ case class Person(
                    starSign: String
                  )
 
+
+
 object Methods {
+
+
   def findCurrentAge(dateOfBirth: LocalDate): Int = {
     val currentDate = LocalDate.now()
     val age = currentDate.getYear - dateOfBirth.getYear
@@ -31,6 +36,8 @@ object Methods {
       age
     }
   }
+
+
 
   def findStarSign(dateOfBirth: LocalDate): String = {
     val monthOfBirth = dateOfBirth.getMonthValue
@@ -64,6 +71,8 @@ object Methods {
       case (_, _) => "That month or day is not known"
     }
   }
+
+
 
   def ageAtDeath(dateOfDeath: Option[LocalDate], dateOfBirth: LocalDate): Option[Int] = {
     dateOfDeath match {
@@ -131,31 +140,4 @@ person.productIterator.foreach {
   (feature) => println(feature)
 }
 
-
-
-
-
-
-
-
-//sealed trait StarSigns
-//
-//case object Aries extends StarSigns
-//case object Taurus extends StarSigns
-//case object Gemini extends StarSigns
-//case object Cancer extends StarSigns
-//case object Leo extends StarSigns
-//case object Virgo extends StarSigns
-//case object Libra extends StarSigns
-//case object Scorpio extends StarSigns
-//case object Sagittarius extends StarSigns
-//case object Capricorn extends StarSigns
-//case object Aquarius extends StarSigns
-//case object Pisces extends StarSigns
-//
-//sealed trait StarSign
-//
-//object StarSigns extends Enumeration {
-//  val starSign1 = Value("StarSignOne")
-//}
-//
+// ChronoUnit.YEARS.between() - chronounit built in method

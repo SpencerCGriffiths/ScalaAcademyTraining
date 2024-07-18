@@ -1,8 +1,8 @@
 package Week2.Wed
 
-import org.scalatest.FlatSpec
+import org.scalatest.flatspec.AnyFlatSpec
 
-class NameLengthSpec extends FlatSpec {
+class NameLengthSpec extends AnyFlatSpec {
 
   "nameLength" should "Return firstName if it is longer than last name" in {
     val test = new NameLength()

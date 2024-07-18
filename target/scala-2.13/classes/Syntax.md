@@ -17,3 +17,8 @@ for (i <- test.indices) {
 println(test(i))
 }
 
+// Split a String 
+"hello world".split(" ")
+res0: Array[java.lang.String] = Array(hello, world)
+
+substring(int beginIndex, int endIndex) 

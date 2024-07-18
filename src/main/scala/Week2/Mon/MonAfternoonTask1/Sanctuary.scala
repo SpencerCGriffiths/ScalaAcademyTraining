@@ -7,6 +7,7 @@ object Sanctuary extends App {
   val hedwigTheSnowyOwl = new Owl("Hedwig", "Snowy Owl", 8, 2, "White", 150)
 
   val pumbaTheWarthog  = new Warthog("Pumbaa", "Common Warthog", 4, "Brown", true)
+  val newWarthog = new Warthog(name = ???, speciesName = ???, age = ???, furColour = ???, hasTail = ???)
 
   val jeffTheDragonfly  = new Dragonfly("Jeff", "Blue Eyed Darner", 1, 12, 10, 1)
 
@@ -14,10 +15,12 @@ object Sanctuary extends App {
   println(hedwigTheSnowyOwl.age)
   println(hedwigTheSnowyOwl.name)
   println(hedwigTheSnowyOwl.speciesName)
-  println(hedwigTheSnowyOwl.wingspan)
+
   println(hedwigTheSnowyOwl.beakLength)
   println(hedwigTheSnowyOwl.featherColour)
   println(hedwigTheSnowyOwl.canFly)
+  
+  
 
 
 
@@ -25,6 +28,9 @@ object Sanctuary extends App {
     val age = animal.age
     age
     }
+
+//  println(pumbaTheWarthog.wingspan)
+  println(hedwigTheSnowyOwl.wingspan)
 
 
   println(getAnimalAge(pumbaTheWarthog))

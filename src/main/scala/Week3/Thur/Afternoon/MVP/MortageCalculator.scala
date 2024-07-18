@@ -1,4 +1,4 @@
-package Week3.Thur.Afternoon
+package Week3.Thur.Afternoon.MVP
 
 case object MortageCalculator extends App {
   // Samantha wants to buy a flat

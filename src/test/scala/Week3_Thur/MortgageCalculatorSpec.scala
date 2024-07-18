@@ -1,6 +1,6 @@
 package Week3_Thur
 
-import Week3.Thur.Afternoon.MortageCalculator._
+import Week3.Thur.Afternoon.MVP.MortageCalculator._
 
 import org.scalatest.matchers.should.Matchers
 import org.scalatest.wordspec.AnyWordSpec

@@ -35,7 +35,7 @@ object Either extends App{
   case object IsOddError extends NewError(400, "Bad Request in the is odd method")
 
   // passing in NewError means we can pass in everything that is extending NewError
-  def isOdd (x: Int): Either[NewError, String] = if (x % 2 != 0) Right(s"$x is odd") else Left(IsOddError)
+  def isOdd (x: Int): Either[String, String] = if (x % 2 != 0) Right(s"$x is odd") else Left(IsOddError.errorMessage)
 
   println(isOdd(4))
   println(isOdd(5))

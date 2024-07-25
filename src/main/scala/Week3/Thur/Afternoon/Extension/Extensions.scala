@@ -64,6 +64,7 @@ object Extensions extends App {
     }
   }
 
+
   val letterWithANumberInName: Either[GenericPostageError, Letter] = Letter.letterOrError("John123", "SE19PQ")
   val letterWithAnInvalidPostcode: Either[GenericPostageError, Letter] = Letter.letterOrError("John", "SE19PQ1") // Invalid due to missing space
   val letterAllInvalid: Either[GenericPostageError, Letter] = Letter.letterOrError("John123", "SE19PQ1") // Invalid name and postcode

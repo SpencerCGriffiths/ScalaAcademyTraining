@@ -24,6 +24,7 @@ val nums: List[Double] = List(1,2,3,4,5,6,7,8)
 
 maxListNum(nums, max)
 
+
 // Create a function named applyFunc. Two params, function Int => Int, val Int
 // the function should apply the function to the integer and return the result
 

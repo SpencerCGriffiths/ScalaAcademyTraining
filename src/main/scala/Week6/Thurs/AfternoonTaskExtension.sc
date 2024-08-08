@@ -49,6 +49,8 @@ val square5 = applyFunc(square, 5)
 println(s"5 squared is ${square5}")
 
 
+
+
 // Create a function named power that takes Int exponent, returning a function Int => Int
 // Return function should take a base Int and raise it to the power of ex
 // Math.pow

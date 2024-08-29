@@ -32,6 +32,13 @@ Contravariance
 contra- varying against 
 Syntax: Set[-T]
 
+If the class has type parameter T then the contravariant notation will be [-T]
+
+This is the opposite of covariant 
+
+Thinking about Set1 and 2. If set 1 is a sub-type of Set[2], Set 1 would be the Super-Type of Set 2 and Set 2 would be the Sub-Ttype. Tjeyu are related
+We can replace Set 1 anywhere Set 2 is expected but not the reverse
+
 Invariance
 can change or be compleetly unrelated
 Syntax: Set[T]

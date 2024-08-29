@@ -56,8 +56,14 @@ println(s"5 squared is ${square5}")
 // Return function should take a base Int and raise it to the power of ex
 // Math.pow
 
-def power(exponent: Int)
+def power(exponent: Int): Int => Int = {
+  base => Math.pow(base, exponent).toInt
+}
 
 // Use the power function to create a square function that squares i.e base 2
 
+def squareX(x:Int):Int = power(2)(x)
+
 // apply the square function to the number 6 and print
+
+println(squareX(6))

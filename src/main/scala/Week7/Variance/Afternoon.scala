@@ -5,31 +5,33 @@ object Afternoon extends App {
 /** 1) Create an abstract Animal Class with fields for Name, and diet */
 
   abstract class Animal {
-    def name: String
-    def diet: String
+    val name: String
+    val diet: String
   }
 
   /** 1a) create some animals that extend this class */
   case class Tiger(name: String, diet: String) extends Animal
 
   /** 1a) Create an Animal val and assign a more specific animal */
-  val animal: Animal = Tiger("Tony", "CornFlakes")
+  val tonyTiger = Tiger("Tony", "CornFlakes")
 
+  val animal: Animal = tonyTiger
   /** 1a) why does this compile? */
-  // Tiger extends Animal, As such Tiger can be declared as the super class Animal
+  // 1A Answer: A Cat is a subtype of Animal as we've extended it, therefore we can assign it to this val without an issue
 
   /** 2) Some Animals are solitary, Model a generic Solitary class that is invariant in type */
-  abstract class Solitary [Animal]
+  class Solitary [A]
 
   /** 2a) create a solitary Cat Val. Try to assign this cat a solitary Animal val */
 
-  case class Cat (name: String, diet: String) extends Solitary
+  case class Cat (name: String, diet: String) extends Animal
 
-//  val solitaryAnimal: Solitary[Animal] = Cat("HissHiss", "Mice")
+  val solitaryCat: Solitary[Cat] = new Solitary[Cat]
+//  val solitaryCat2: Solitary[Animal] = solitaryCat
 
   /** 2a) Why does this not compile?*/
-  // Solitary is type Animal but it is invariant i.e. does not allow the subclasses to stand in for the superclass type
-  // Making this type Covariant to allow for the subclass to inherit:
+  // 2A Answer: We've said Solitary is invariant in A so Solitary[Cat] and Solitary[Animal] are 2 completely different
+  // types. It would like were were assigning a String to an val x: Int
 
   abstract class SolitaryCo [+Animal]
   case class CatCo (name: String, diet: String) extends SolitaryCo
